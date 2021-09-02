@@ -609,6 +609,7 @@ public class Main extends javax.swing.JFrame {
         listMenu.removeAllElements();
         
         btnPedido.setVisible(false);
+        total.setText("0.00");
     }//GEN-LAST:event_btnPedidoActionPerformed
 
     void addList(Beverage bebida){
@@ -647,10 +648,11 @@ public class Main extends javax.swing.JFrame {
         int rest = 4;
         
         do{
-            String res = JOptionPane.showInputDialog(jFrame, "Desea un agregado Agregado: \n 01) Milk\n 02) Mocha\n 03) Soya\n 04) Terminar Pedido");
+            // Milk 3.00, Mocha 6.00, Soy 9.00
+            String res = JOptionPane.showInputDialog(jFrame, "Desea un agregado Agregado: \n 01) Milk        $3.00\n 02) Mocha   $6.00\n 03) Soya      $9.00\n 04) Terminar Pedido");
             
             while(!(res.equals("1") || res.equals("2") || res.equals("3") || res.equals("4"))){
-                res = JOptionPane.showInputDialog(jFrame, "Elije una opcion correcta: \n 01) Milk\n 02) Mocha\n 03) Soya\n 04) Terminar Pedido");                
+                res = JOptionPane.showInputDialog(jFrame, "Elije una opcion correcta: \n 01) Milk        $3.00\n 02) Mocha   $6.00\n 03) Soya      $9.00 \n 04) Terminar Pedido");                
             }
 
 //            System.out.println(res);
